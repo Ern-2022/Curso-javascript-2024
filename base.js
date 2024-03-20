@@ -19,7 +19,7 @@ const arquivos = [
     'Lista de compras.txt',
 ];
 
-const html = '<p> Ola mundo </p> <p> Ola de novo </p>';
+const html = '<p> Ola mundo </p> <p> Ola de novo </p> <div> Sou a div </div>';
 
 // <.+>.+<\/.+>
 
