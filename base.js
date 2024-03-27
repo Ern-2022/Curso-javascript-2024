@@ -19,6 +19,8 @@ const arquivos = [
     'Lista de compras.txt',
 ];
 
+const alfabeto = 'ABCDEFGHIJKLMNPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz @! 123456789 !';
+
 const html = '<p> Ola mundo </p> <p> Ola de novo </p> <div> Sou a div </div>';
 
 // <.+>.+<\/.+>
@@ -26,5 +28,6 @@ const html = '<p> Ola mundo </p> <p> Ola de novo </p> <div> Sou a div </div>';
 module.exports = {
     texto,
     arquivos,
-    html
+    html,
+    alfabeto
 }
