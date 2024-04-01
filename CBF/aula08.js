@@ -11,7 +11,7 @@ console.log(res)
 let n3=10
 let n4=11
 let run=n3|n4
-console.log(run)
+console.log(run)   
 
 //exemplo 3
 
