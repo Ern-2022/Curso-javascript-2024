@@ -7,7 +7,7 @@ cursos.map((el,chave) => {
     const novoElement = document.createElement("div")
     novoElement.setAttribute("id", "c"+chave)
     novoElement.setAttribute("class", "curso c1")
-    novoElement.innerHTML = "ReactNative"
+    novoElement.innerHTML = el
     caixa1.appendChild(novoElement)
 })
 
