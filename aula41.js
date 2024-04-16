@@ -11,12 +11,12 @@ cursos.map((el, chave) => {
     novoElement.setAttribute("class", "curso c1")
     novoElement.innerHTML = el
     const btn_lixeira = document.createElement("img")
-    btn_lixeira.setAttribute("src", "./imgern.svg")
+    btn_lixeira.setAttribute("src", "./CBF/ern/icon.svg")
     btn_lixeira.setAttribute("class", "btn_lixeira")
+    btn_lixeira.addEventListener("click", (evt) => {
+        caixa1.removeChild(evt.target.parentNode)
+    })
     novoElement.appendChild(btn_lixeira)
 
-    novoElement.addEventListener("click", (evt) => {
-        caixa1.removeChild(evt.target)
-    })
     caixa1.appendChild(novoElement)
 })
