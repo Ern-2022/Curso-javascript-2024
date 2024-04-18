@@ -83,7 +83,7 @@ button{
     align-items: center;
 }
 
-.caixaNovoCurso input{
-    padding: 10px;
-    margin: 5px;
+#caixaNovoCurso input{
+    padding: 5px;
+    margin: 10px;
 }
