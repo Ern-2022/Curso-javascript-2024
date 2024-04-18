@@ -15,8 +15,21 @@ const criarNovoCurso = (curso) => {
     novoElemento.setAttribute("id", "c" + indice)
     novoElemento.setAttribute("class", "curso c1")
     novoElemento.innerHTML = curso
+
+    const comandos = document.createElement("div")
+    comandos.setAttribute("class","comandos")
+
+    const rb = document.createElement("input")
+    rb.setAttribute("type","radio")
+    rb.setAttribute("name","rb_curso")
+
+    comandos.appendChild(rb)
+    novoElemento.appendChild(comandos)
+
     return novoElemento
 }
+
+    
 
 cursos.map((el, chave) => {
     const novoElemento = criarNovoCurso(el)
