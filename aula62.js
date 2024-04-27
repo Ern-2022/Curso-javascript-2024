@@ -52,6 +52,8 @@ c2.atirar()
 c2.atirar()
 c2.atirar()
 
+
+ 
 console.log(`Nome:${c1.nome}`)
 console.log(`Portas:${c1.portas}`)
 console.log(`Ligado:${(c1.ligado?"sim":"nao")}`)
