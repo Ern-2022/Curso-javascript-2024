@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aula64.css">
+    <title>Aula 64</title>
+</head>
+<body>
+    <div id="criarCarro" class="criarCarro">
+        <div class="campoform">
+            <label>Nome</label>
+            <input type="text" id="f_nome" name="f_nome" value="">
+        </div><!--campoform-->
+
+        <div class="campoform">
+            <label>Portas</label>
+            <input type="number" name="f_portas" id="f_portas" value="0">
+        </div><!--campoform-->
+
+        <div class="campoform">
+            <label>Blindagem</label>
+            <input type="number" name="f_blindagem" id="f_blindagem" disabled value="0">
+        </div><!--campoform-->
+
+        <div class="campoform">
+            <label>Municao</label>
+            <input type="number" name="f_municao" id="f_municao" disabled value="0">
+        </div><!--campoform-->
+
+        <div class="campoform">
+            <label>Tipo</label>
+            <div class="radio">
+                <input type="radio" name="f_tipo" id="f_tipoMilitar" value="m">Militar
+            </div><!--radio-->
+
+            <div class="radio">
+                <input type="radio" name="f_tipo" id="f_tipoNormal" value="n" checked>Normal
+            </div><!--radio-->
+        </div><!--campoform-->
+
+        <div class="campoform">
+            <button id="btn_addCarro">Adicior</button>
+        </div>
+
+    </div><!--#criarCarro-->
+
+    <div id="carros" class="carros">
+        <!-- <div class="carro">Golf</div> -->
+    </div><!--carros-->
+
+    <script src="aula64.js"></script>
+</body>
+</html>
