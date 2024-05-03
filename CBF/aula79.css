@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    border: 3px #888 solid;
+}
+
+.div_relogio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    background-color: #444;
+    color: #0f0;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+
+input[type="number"]{
+    border: 1px #000 solid;
+    font-size: larger;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+button{
+    background-color: #aaa;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.alarme{
+    background-color: #f00 !important;
+}
