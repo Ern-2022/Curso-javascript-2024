@@ -17,7 +17,7 @@ class Bola{
         this.g=Math.floor(Math.random()*255)
         this.b=Math.floor(Math.random()*255)
         this.px=Math.floor(Math.random()*(larguraPalco-this.tam))
-        this.px=Math.floor(Math.random()*(alturapalco-this.tam))
+        this.py=Math.floor(Math.random()*(alturapalco-this.tam))
     }
 }
 
