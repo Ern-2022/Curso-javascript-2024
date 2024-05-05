@@ -8,6 +8,13 @@ let contato ={
         return contatos[i_cont]
     },
     addContato:function(novoContato,destinoDom){
+        const cont = {
+            nome:novoContato.nome,
+            telefone:novoContato.telefone,
+            email:novoContato.email
+        }
+
+        contatos.push({})
         const div =document.createElement("div")
         div.setAttribute("class","contato")
         const p_nome = document.createElement("p")

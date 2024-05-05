@@ -9,4 +9,5 @@ btn_gravar.addEventListener("click",(evt)=>{
         email:document.getElementById("f_email").value
     }
     c.addContato(cont,listaContatos)
+    console.log(c.getTodosContatos())
 })
