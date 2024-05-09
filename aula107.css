@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.painel{
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #eee;
+}
+
+button{
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #ccc;
+    margin: 10px;
+}
+
+.carro{
+    width: 100px;
+    height: 40px;
+    background-color: #f00;
+}
