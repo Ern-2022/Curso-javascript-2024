@@ -41,19 +41,19 @@
 
         const obterDados = () => {
             const endpoint = "https://replit.com/@Ernicio-Jermias"
-                .fetch(endpoint)
+            fetch(endpoint)
                 .then(res => res.json())
                 .then(res => [
-                    valores[0] = res.disponibilidade,
-                    valores[1] = res.qualidade,
-                    valores[2] = res.performance,
+                    valores[0] = res.disponibilidade
+                    valores[1] = res.qualidade
+                    valores[2] = res.performance
                     grafico1.update()
                 ])
                 .catch(erro => [
                     console.log("ERRO:" + erro)
                 ])
         }
-        
+
         let gap = setInterval(obterDados, 3000)
     </script>
 
