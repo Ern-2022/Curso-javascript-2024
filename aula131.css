@@ -1,0 +1,40 @@
+*{
+padding: 0;
+margin: 0;
+border: 0;
+box-sizing: border-box;
+}
+
+#timer{
+    background-color: #333;
+    color: #0f0;
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 5px solid #888;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    width: inherit;
+}
+
+#divTimer{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+#botoes{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn{
+    cursor: pointer;
+    background-color: #ccc;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
