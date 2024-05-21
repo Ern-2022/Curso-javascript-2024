@@ -1,12 +1,12 @@
 const timer = document.getElementById("timer")
 
-const tmpni = Date.now()
-console.log(tmpni)
+const tmpini = Date.now()
+console.log(tmpini)
 
 const contador =()=>{
     const tmpatual = Date.now()
-    let cont = tmpatual-tmpni
-    let seg = Math.floor((tmpatual - tmpni)/1000)
+    let cont = tmpatual-tmpini
+    let seg = Math.floor((tmpatual - tmpini)/1000)
     console.log(seg)
 }
 
