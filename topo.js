@@ -8,7 +8,7 @@ const estilotopo =
     "align-items: center;"
 
 
-const estilo_img_logo = "width:200px;"+
+const estilo_img_logo = "width:100px;"
 
 
 topo.setAttribute("id", "topo")
@@ -17,8 +17,10 @@ body.prepend(topo)
 
 const logo =
     " <div id='logo' class='logo'>" +
-    " <img src='logo.svg' title='kosmo' style='"+estilo_img_logo+"'>" +
+    " <img src='logo-ern.png' title='kosmo' style='"+estilo_img_logo+"'>" +
     "</div>"
+
+topo.innerHTML += logo
 
 const login =
     " <div id='login' class='login'>" +
