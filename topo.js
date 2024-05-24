@@ -5,7 +5,8 @@ const estilotopo =
     "display: flex;" +
     "justify-content: space-between;" +
     "background-color: #48f;" +
-    "align-items: center;"
+    "align-items: center;"+
+    "border-radius:5px"
 
 
 const estilo_img_logo = "width:100px;"
