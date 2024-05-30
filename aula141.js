@@ -1,3 +1,3 @@
 import { Login } from "./login.js";
 
-Login.login("123","323");
+Login.login("123","321");

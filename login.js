@@ -10,7 +10,15 @@ class Login {
         fetch(this.endpoind)
         .then(res=>res.json())
         .then(res=>{
-            console.log(  res);
+            if(res){
+                this.logando=true;
+                this.matlogando=mat;
+                this.nomelogando= res.nome;
+                this.acessologando = res.acesso;
+                console.log(res);
+            }else{
+                console.log("usuario nao encontrado");
+            }
         })
     }
 }
