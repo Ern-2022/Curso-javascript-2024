@@ -10,8 +10,8 @@ class Login {
         img: "./logo-ern.png"
     }
 
-    static login = (mat, pas, config = null) => {
-        this.endpoind += `?matricula-${mat}&senha-${pas}`
+    static login = (config = null) => {
+        // this.endpoind += `?matricula-${mat}&senha-${pas}`
         if (config != null) {
             this.config = config
         }
@@ -89,11 +89,21 @@ class Login {
         const btn_login = document.createElement("button")
         btn_login.setAttribute("id","btn_login")
         btn_login.innerHTML = "Login"
+        btn_login.addEventListener("click",(evt)=>{
+            if(this.verficaLogin){
+                this.fechar()
+            }else{
+                
+            }
+        })
         botoesLogin.appendChild(btn_login)
 
         const btn_cancelar = document.createElement("button")
         btn_cancelar.setAttribute("id","btn_cancelar")
         btn_cancelar.innerHTML = "Cancelar"
+        btn_cancelar.addEventListener("click",(evt)=>{
+            this.fechar()
+        })
         botoesLogin.appendChild(btn_cancelar)
 
         const logoLogin = document.createElement("div")
@@ -149,6 +159,25 @@ class Login {
         //         console.log("usuario nao encontrado");
         //     }
         // })
+    }
+
+    static verficaLogin = ()=>{
+        const mat =document.querySelector("#f_username").value;
+        const pas = document.querySelector("#f_senha").value;
+
+        if(mat=="123" && pas == "321"){
+            return true
+        }else{
+            return false
+        }
+    }
+
+    static fechar = ()=>{
+        const fundoLogin = document.querySelector("#fundoLogin")
+        fundoLogin.remove()
+
+        const id_estiloLogin = document.querySelector("#id_estiloLogin")
+        id_estiloLogin.remove()
     }
 }
 
