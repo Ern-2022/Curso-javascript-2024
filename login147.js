@@ -27,7 +27,7 @@ class Login {
             ".campoLogin input{ font-size: 18px; padding: 5px; background-color: #fff; border-radius: 5px; }" +
             ".botoesLogin { display: flex; justify-content: space-around; align-items: center; width: 100%; box-sizing: inherit; }" +
             `.botoesLogin button { cursor: pointer; color: #fff; background-color: #${this.config.cor}; padding: 10px; border-radius: 5px; width: 100px; box-sizing: inherit;}`
-
+            
         const styleEstilo = document.createElement("style")
 
         styleEstilo.setAttribute("id", "id_estiloLogin")
@@ -87,13 +87,13 @@ class Login {
         elementosLogin.appendChild(botoesLogin)
 
         const btn_login = document.createElement("button")
-        btn_login.setAttribute("id", "btn_login")
+        btn_login.setAttribute("id","btn_login")
         btn_login.innerHTML = "Login"
         botoesLogin.appendChild(btn_login)
 
         const btn_cancelar = document.createElement("button")
-        btn_cancelar.setAttribute("id", "btn_cancelar")
-        btn_cancelar.innerHTML = " Cancelar"
+        btn_cancelar.setAttribute("id","btn_cancelar")
+        btn_cancelar.innerHTML = "Cancelar"
         botoesLogin.appendChild(btn_cancelar)
 
         const logoLogin = document.createElement("div")
