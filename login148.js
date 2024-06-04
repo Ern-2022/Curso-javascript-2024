@@ -4,14 +4,14 @@ class Login {
     static nomelogando = null;
     static acessologando = null;
     static estilocss = null
-    static endpoind = "https://0bf19043-19a4-409e-816c-f255443170a5-00-245sva18d8w82.spock.replit.dev/";
+    static endpoind = "https://d42b24b3-5480-4915-9a0c-7afcd8a5b7f3-00-28sf34d927uyd.picard.replit.dev/";
     static config = {
         cor: "048",
         img: "./logo-ern.png"
     }
 
     static login = (config = null) => {
-        // this.endpoind += `?matricula-${mat}&senha-${pas}`
+        //  this.endpoind += `?matricula-${mat}&senha-${pas}`
         if (config != null) {
             this.config = config
         }
@@ -90,12 +90,8 @@ class Login {
         btn_login.setAttribute("id", "btn_login")
         btn_login.innerHTML = "Login"
         btn_login.addEventListener("click", (evt) => {
-            if (this.verficaLogin) {
-                this.fechar()
-            } else {
-
-            }
-        })
+            this.verficaLogin();
+        });
         botoesLogin.appendChild(btn_login)
 
         const btn_cancelar = document.createElement("button")
@@ -146,32 +142,32 @@ class Login {
 
 
 
-        // fetch(this.endpoind)
-        // .then(res=>res.json())
-        // .then(res=>{
-        //     if(res){
-        //         this.logando=true;
-        //         this.matlogando=mat;
-        //         this.nomelogando= res.nome;
-        //         this.acessologando = res.acesso;
-        //         console.log(res);
-        //     }else{
-        //         console.log("usuario nao encontrado");
-        //     }
-        // })
     }
 
     static verficaLogin = () => {
         const mat = document.querySelector("#f_username").value;
         const pas = document.querySelector("#f_senha").value;
 
-        const endpoind = ``
+        const endpoind = `https://d42b24b3-5480-4915-9a0c-7afcd8a5b7f3-00-28sf34d927uyd.picard.replit.dev/?matricula=${mat}&senha=${pas}`
 
-        if (mat == "123" && pas == "321") {
-            return true
-        } else {
-            return false
-        }
+        fetch(endpoind)
+        .then(res=>res.json())
+        .then(res=>{
+            if(res){
+                this.logando=true;
+                this.matlogando=mat;
+                this.nomelogando= res.nome;
+                this.acessologando = res.acesso;
+                this.fechar()
+            }else{
+                this.logando= false;
+                this.matlogando=null;
+                this.nomelogando= null;
+                this.acessologando = null;
+                alert("Login efetuado! UserName ou password incorretos.")
+            }
+        })
+
     }
 
     static fechar = () => {
