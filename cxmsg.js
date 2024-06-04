@@ -24,7 +24,8 @@ class Cxmsg {
             "width:100%;" +
             "height:100vh;" +
             "position:absolute;" +
-            "background-color:rgba(0,0,0,0.7);"
+            "background-color:rgba(0,0,0,0.7);"+
+            "z-index:9999999999999;"
         this.divmsg.setAttribute("id", "divmsg")
         this.divmsg.setAttribute("style", estilo_divmsg)
         this.destino.prepend(this.divmsg)
@@ -98,6 +99,7 @@ class Cxmsg {
             btn_ok.innerHTML = "ok"
             btn_ok.addEventListener("click", (evt) => {
                 this.ocultar()
+                this.comando_sn()
             })
             rodapeCxmsg.appendChild(btn_ok)
         }else if(this.tipo=="sn"){
