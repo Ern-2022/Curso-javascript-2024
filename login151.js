@@ -13,11 +13,15 @@ class Login {
         endpoind: null // "https://replit.com/@Ernicio-Jermias/login-v1"
     }
 
-    static login = (callback_ok, callback_naook, config = null) => {
+    static login = (callback_ok, callback_naook, config) => {
+        sessionStorage.setItem("logando", "false")
+        sessionStorage.setItem("matlogando", "")
+        sessionStorage.setItem("nomelogando", "")
+        sessionStorage.setItem("acessologando", "")
+
         //  this.endpoind += `?matricula-${mat}&senha-${pas}`
-        if (config != null) {
+ 
             this.config = config
-        }
         this.callback_ok = () => { callback_ok() }
         this.callback_naook = () => { callback_naook() }
 
@@ -103,6 +107,10 @@ class Login {
         btn_cancelar.setAttribute("id", "btn_cancelar")
         btn_cancelar.innerHTML = "Cancelar"
         btn_cancelar.addEventListener("click", (evt) => {
+            sessionStorage.setItem("logando", "false")
+            sessionStorage.setItem("matlogando", "")
+            sessionStorage.setItem("nomelogando", "")
+            sessionStorage.setItem("acessologando", "")
             this.fechar()
         })
         botoesLogin.appendChild(btn_cancelar)
