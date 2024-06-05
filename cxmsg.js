@@ -13,7 +13,7 @@ class Cxmsg {
         this.texto = texto
         this.textos =config.textos
         this.tipo = config.tipo
-        this.comando_sn = ()=>{config.comando_sn()}
+        this.comando_sn = ()=>{config.comando_sn}
         this.divmsg = document.createElement("div")
         const estilo_divmsg =
             "display:flex;" +
