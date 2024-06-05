@@ -1,9 +1,7 @@
 import { Cxmsg } from "./cxmsg.js";
 
 
-const callback_ok = () => {
-
-}
+const callback_ok = () => {}
 
 const callback_naook = () => {
     const config = {

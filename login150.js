@@ -6,7 +6,7 @@ class Login {
     static estilocss = null
     static callback_ok = null
     static callback_naook = null
-    static endpoind = "https://d42b24b3-5480-4915-9a0c-7afcd8a5b7f3-00-28sf34d927uyd.picard.replit.dev/";
+    static endpoind = "https://replit.com/@Ernicio-Jermias/login-v1";
     static config = {
         cor: "048",
         img: "./logo-ern.png"
