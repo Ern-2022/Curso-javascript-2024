@@ -1,7 +1,7 @@
 [
     {
         "id":"01",
-        "produto":"processador",
+        "produto":"Processador",
         "marca":"intel",
         "modelo":"i7"
     },
@@ -9,7 +9,7 @@
     {
         "id":"02",
         "produto":"Mouse",
-        "marca":"logitech",
+        "marca":"Logitech",
         "modelo":"M90"
     },
 
@@ -26,5 +26,12 @@
         "produto":"Impressora",
         "marca":"HP",
         "modelo":"P1005"
+    },
+
+    {
+        "id":"05",
+        "produto":"Drone",
+        "marca":"DJI",
+        "modelo":"Mini 3 Pro"
     }
 ]
