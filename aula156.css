@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.dgv{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+.dgvDados{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+
+.dgvLinha{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: row;
+}
+
+.dgvTitulos{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    flex-direction: row;
+    background-color:#128;
+    color:#fff;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.dgvTitulos div, .dgvLinha div {
+    padding: 5px;
+}
+
+.dgvLinha:nth-child(odd){
+    background-color: #ddd;
+}
+
+.dgvLinha:nth-child(even){
+    background-color: #eee;
+}
+
+.dgvLinha:hover{
+    background-color: #088 !important;
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.coluna{
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+}
+
+.c1{
+    width: 50px;
+}
+
+.c2{
+    width: 150px;
+}
+
+.c3{
+    width: 150px;
+}
+
+.c4{
+    width: 150px;
+}
+
+.c5{
+    width: 100px;
+    display: flex;
+    justify-content: space-around !important;
+}
+
+.dgvIcone{
+    width: 20px;
+}
