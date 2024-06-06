@@ -8,14 +8,14 @@
 .dgv{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-self: flex-start;
     flex-direction: column;
 }
 
 .dgvDados{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-self: flex-start;
     flex-direction: column;
 }
 
@@ -23,14 +23,14 @@
 .dgvLinha{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-self: flex-start;
     flex-direction: row;
 }
 
 .dgvTitulos{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-self: flex-start;
     flex-direction: row;
     background-color:#128;
     color:#fff;
@@ -55,6 +55,12 @@
     cursor: pointer;
 }
 
+.coluna{
+    display: flex;
+    justify-content: flex-start;
+    align-self: center;
+}
+
 .c1{
     width: 50px;
 }
@@ -73,4 +79,10 @@
 
 .c5{
     width: 100px;
+    display: flex;
+    justify-content: space-around !important;
+}
+
+.dgvIcone{
+    width: 20px;
 }
