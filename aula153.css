@@ -16,6 +16,14 @@
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: column;
+}
+
+
+.dgvLinha{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: row;
 }
 
@@ -29,7 +37,7 @@
     border-radius: 5px 5px 0px 0px;
 }
 
-.dgvTitulos div, .dgvDados div {
+.dgvTitulos div, .dgvLinha div {
     padding: 5px;
 }
 
