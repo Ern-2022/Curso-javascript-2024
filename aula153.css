@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.dgv{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.dgvDados{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.dgvTitulos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color:#128;
+    color:#fff;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.dgvTitulos div, .dgvDados div {
+    padding: 5px;
+}
+
+.c1{
+    width: 50px;
+}
+
+.c2{
+    width: 150px;
+}
+
+.c3{
+    width: 150px;
+}
+
+.c4{
+    width: 150px;
+}
+
+.c5{
+    width: 100px;
+}
