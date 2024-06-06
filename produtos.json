@@ -1,0 +1,30 @@
+[
+    {
+        "id":"01",
+        "produto":"processador",
+        "marca":"intel",
+        "modelo":"i7"
+    },
+
+    {
+        "id":"02",
+        "produto":"Mouse",
+        "marca":"logitech",
+        "modelo":"M90"
+    },
+
+    {
+        "id":"03",
+        "produto":"Monitor",
+        "marca":"Samsung",
+        "modelo":"Syncmaster"
+
+    },
+
+    {
+        "id":"04",
+        "produto":"Impressora",
+        "marca":"HP",
+        "modelo":"P1005"
+    }
+]
