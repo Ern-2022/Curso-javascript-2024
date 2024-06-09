@@ -5,6 +5,7 @@ const btn_novo = document.getElementById("btn_novo")
 const btn_pesquisar = document.getElementById("btn_pesquisar")
 const btn_gestao = document.getElementById("btn_gestao")
 const btn_sobre = document.getElementById("btn_sobre")
+const btn_filtrar =document.getElementById("btn_filtrar")
 const principal = document.getElementById("principal")
 
 
@@ -19,6 +20,10 @@ btn_novo.addEventListener("click", (evt) => {
 btn_pesquisar.addEventListener("click", (evt) => {
     selecionarAba(evt.target, "./pesquisar.html")
 
+})
+
+btn_filtrar.addEventListener("click",(evt)=>{
+    selecionarAba(evt.target, "./filtrar.html")
 })
 
 btn_gestao.addEventListener("click", (evt) => {
