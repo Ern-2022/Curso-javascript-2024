@@ -9,13 +9,11 @@ btn_pesq.addEventListener("click",(evt)=>{
         return
     }
     const f_pesq = document.querySelector("input[name=f_pesq]:checked").value
-    if(f_pesq=="id"){
+    const entpoint = `http://127.0.0.1:1880/pesquisarcontatos/${f_pesq}/${valorpesq}`
+    fetch(entpoint)
+    .then(res=>res.json())
+    .then(res=>{
+        console.log(res)
+    })
 
-    }else if(f_pesq=="nome"){
-
-    }else if(f_pesq=="nasc"){
-
-    }else if(f_pesq=="email"){
-
-    }
 })
