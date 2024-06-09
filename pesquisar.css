@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.pesquisa{
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.campoPesq{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+input[type=text]{
+    /* border: 1px solid #f00; */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+label{
+    margin-right: 5px;
+}
+
+#btn_pesq{
+    background-color: #999;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    margin: 10px;
+}

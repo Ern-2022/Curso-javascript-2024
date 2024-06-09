@@ -4,37 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="aula162.css">
+    <link rel="stylesheet" href="pesquisar.css">
 </head>
 
 <body>
-    <div id="pesquisa">
-        <div id="campoPesq">
+    <div id="pesquisa" class="pesquisa">
+        <div class="campoPesq">
             <label>ID</label>
             <input type="radio" name="f_pesq" value="id">
         </div>
 
-        <div id="campoPesq">
+        <div class="campoPesq">
             <label>Nome</label>
             <input type="radio" name="f_pesq" value="nome" checked>
         </div>
 
-        <div id="campoPesq">
-            <label>E-mail</label>
-            <input type="radio" name="f_pesq" value="email">
-        </div>
-
-        <div id="campoPesq">
+        <div class="campoPesq">
             <label>Nascimento</label>
             <input type="radio" name="f_pesq" value="nasc">
         </div>
 
-        <div id="campoPesq">
-            <label>Pesquisar</label>
-            <input type="text" name="f_textpesq">
+        <div class="campoPesq">
+            <label>E-mail</label>
+            <input type="radio" name="f_pesq" value="email">
         </div>
 
-        <div id="campoPesq">
+        <div class="campoPesq">
+            <label>Pesquisar</label>
+            <input type="text" name="f_textpesq" id="f_textpesq">
+        </div>
+
+        <div class="campoPesq">
             <button id="btn_pesq">Pesquisar</button>
         </div>
     </div>
@@ -42,7 +42,7 @@
     <div id="resultado">
 
     </div>
-    <!-- <script src="aula162.js"></script> -->
+    <script src="pesquisar.js"></script>
 </body>
 
 </html>
