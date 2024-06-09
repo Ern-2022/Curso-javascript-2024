@@ -20,7 +20,7 @@ btn_gravar.addEventListener("click",(evt)=>{
     fetch(endpoind,cabecalho)
     .then(res=>{
         if(res.status==200){
-            console.log("Ok");
+          reset()
         }else{
             console.log(
                 alert("Erro ao gravar novo contato")
@@ -28,3 +28,15 @@ btn_gravar.addEventListener("click",(evt)=>{
         }
     })
 })
+
+btn_cancelar.addEventListener("click",(evt)=>{
+    reset()
+})
+
+const reset = ()=>{
+    f_nome.value = ""
+            f_celular.value = ""
+            f_email.vaule = ""
+            f_dtnasc.value = ""
+            f_nome.focus()
+}
