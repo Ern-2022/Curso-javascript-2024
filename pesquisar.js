@@ -8,7 +8,7 @@ btn_pesq.addEventListener("click",(evt)=>{
         f_textpesq.focus()
         return
     }
-    const f_pesq = document.querySelector("input[name=f_pesq]:checked").value
+    const f_pesq = document.querySelector("input[name=f_pesq]:checked").value 
     const entpoint = `http://127.0.0.1:1880/pesquisarcontatos/${f_pesq}/${valorpesq}`
     fetch(entpoint)
     .then(res=>res.json())
