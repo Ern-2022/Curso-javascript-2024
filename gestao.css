@@ -46,10 +46,11 @@
 .linhadados{
     display: flex;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
     width: inherit;
     background-color: #fff;
+    /* border: 1px solid #f00; */
 }
 
 .coluna{

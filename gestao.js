@@ -1,6 +1,6 @@
 const dados = document.getElementById("dados")
 
-const preencherdgv = ()=>{
+const preencherdgv = () => {
     dados.innerHTML = ""
     const entpoint = `http://127.0.0.1:1880/pesquisartodoscontatos/`
     fetch(entpoint)
@@ -39,11 +39,17 @@ const preencherdgv = ()=>{
                 const c6 = document.createElement("div")
                 c6.setAttribute("class", "coluna c6 c_op")
                 const imgTrash = document.createElement("img")
-                imgTrash.setAttribute("src","trash.svg")
-                imgTrash.setAttribute("class","iconeop")
+                imgTrash.setAttribute("src", "trash.svg")
+                imgTrash.setAttribute("class", "iconeop")
+                imgTrash.addEventListener("click", (evt) => {
+                    // console.log(evt.target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML)
+                    // console.log(evt.target.parentNode.parentNode.firstChild.innerHTML)
+                    const id = evt.target.parentNode.parentNode.firstChild.innerHTML;
+                    removerContato(evt.target.parentNode.parentNode.firstChild.innerHTML)
+                })
                 const imgEdit = document.createElement("img")
-                imgEdit.setAttribute("src","edit.svg")
-                imgEdit.setAttribute("class","iconeop")
+                imgEdit.setAttribute("src", "edit.svg")
+                imgEdit.setAttribute("class", "iconeop")
 
                 c6.appendChild(imgTrash)
                 c6.appendChild(imgEdit)
@@ -56,3 +62,14 @@ const preencherdgv = ()=>{
 }
 
 preencherdgv()
+
+const removerContato = (id) => {
+    const endpoint = `http://127.0.0.1:1880/deletarcontatos/${id}`
+    fetch(endpoint)
+    // .then(res=>res.json)
+    .then(res=>{
+        if(res.status==200){
+            preencherdgv()
+        }
+    })
+}
