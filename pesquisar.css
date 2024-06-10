@@ -40,3 +40,74 @@ label{
     text-transform: uppercase;
     margin: 10px;
 }
+
+.resultado{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 800px;
+}
+
+.dgv{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.titulos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: inherit;
+    background-color: #999;
+    color: #fff;
+}
+
+.titulo{
+    border: 1px solid #ddd;
+    padding: 3px;
+}
+
+.dados{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: inherit;
+}
+
+.linhadados{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    width: inherit;
+    background-color: #fff;
+}
+
+.coluna{
+    padding: 3px;
+}
+
+.c1{
+    width: 10%;
+}
+
+.c2{
+    width: 40%;
+}
+
+.c3{
+    width: 20%;
+}
+
+.c4{
+    width: 20%;
+}
+
+.c5{
+    width: 10%;
+}
