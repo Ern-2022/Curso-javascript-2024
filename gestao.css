@@ -137,8 +137,22 @@ h2 {
   width: inherit;
   background-color: #ddd;
   padding: 5px;
+  flex-direction: column;
 }
 
+.campoForm{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction:column;
+    width: 100%;
+}
+
+.campoForm input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
 .rodapepopup {
   display: flex;
   justify-content: space-around;
