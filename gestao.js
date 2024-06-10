@@ -38,7 +38,12 @@ const preencherdgv = ()=>{
 
                 const c6 = document.createElement("div")
                 c6.setAttribute("class", "coluna c6")
-                 
+                const imgTrash = document.createElement("img")
+            
+                const imgEdit = document.createElement("img")
+
+                c1.appendChild(imgTrash)
+                c1.appendChild(imgEdit)
                 linha.appendChild(c6)
 
                 dados.appendChild(linha)
