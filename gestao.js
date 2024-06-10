@@ -36,6 +36,11 @@ const preencherdgv = ()=>{
                 c5.innerHTML = el.dt_dtnasc_contato
                 linha.appendChild(c5)
 
+                const c6 = document.createElement("div")
+                c6.setAttribute("class", "coluna c6")
+                 
+                linha.appendChild(c6)
+
                 dados.appendChild(linha)
             });
         })

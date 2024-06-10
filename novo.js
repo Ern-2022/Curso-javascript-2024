@@ -40,4 +40,5 @@ const reset = () => {
     f_email.vaule = ""
     f_dtnasc.value = ""
     f_nome.focus()
+
 }
