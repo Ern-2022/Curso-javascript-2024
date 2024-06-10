@@ -11,6 +11,22 @@ const f_dtnasc = document.getElementById("f_dtnasc")
 
 btn_gravar.addEventListener("click", (evt) => {
     fundopopup.classList.add("ocultar")
+    const endpoint =`http://127.0.0.1:1880/actualizarcontatos/${f_id.value}/${f_nome.value}/${f_celular.value}/${f_email.value}/${f_dtnasc.value}`
+    fetch(endpoint)
+    .then(res=>{
+        if(res.status==200){
+            alert("Dados atulizados")
+            preencherdgv()
+        }else{
+            alert("Erro ao atualizar dados")
+        }
+    })
+    f_id.vaule = dados[0].innerHTML
+    f_nome.value = dados[1].innerHTML
+    f_celular.value = dados[2].innerHTML
+    f_email.value = dados[3].innerHTML
+    f_dtnasc.value = dados[4].innerHTML
+
 })
 
 btn_cancelar.addEventListener("click", (evt) => {
