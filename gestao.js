@@ -67,9 +67,14 @@ const preencherdgv = () => {
                 const imgEdit = document.createElement("img")
                 imgEdit.setAttribute("src", "edit.svg")
                 imgEdit.setAttribute("class", "iconeop")
-                imgEdit.addEventListener("click", (evt) => {
+                imgEdit.addEventListener("click",(evt) => {
                     fundopopup.classList.remove("ocultar")
-                    const dados = evt.target.parentNode.parentNode.childNodes
+                    const dados = [...evt.target.parentNode.parentNode.childNodes];
+                    f_id.vaule=dados[0].innerHTML
+                    f_nome.value=dados[1].innerHTML
+                    f_celular.value=dados[2].innerHTML
+                    f_email.value=dados[3].innerHTML
+                    f_dtnasc.value =dados[4].innerHTML
                 })
 
                 c6.appendChild(imgTrash)
