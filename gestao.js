@@ -1,4 +1,21 @@
 const dados = document.getElementById("dados")
+const fundopopup = document.getElementById("fundopopup")
+const btn_gravar = document.getElementById("btn_gravar")
+const btn_cancelar = document.getElementById("btn_cancelar")
+const f_id
+const f_nome
+const f_celular
+const f_email
+const f_dtnasc
+
+
+btn_gravar.addEventListener("click", (evt) => {
+    fundopopup.classList.add("ocultar")
+})
+
+btn_cancelar.addEventListener("click", (evt) => {
+    fundopopup.classList.add("ocultar")
+})
 
 const preencherdgv = () => {
     dados.innerHTML = ""
@@ -50,6 +67,10 @@ const preencherdgv = () => {
                 const imgEdit = document.createElement("img")
                 imgEdit.setAttribute("src", "edit.svg")
                 imgEdit.setAttribute("class", "iconeop")
+                imgEdit.addEventListener("click", (evt) => {
+                    fundopopup.classList.remove("ocultar")
+                    const dados = evt.target.parentNode.parentNode.childNodes
+                })
 
                 c6.appendChild(imgTrash)
                 c6.appendChild(imgEdit)
@@ -66,10 +87,10 @@ preencherdgv()
 const removerContato = (id) => {
     const endpoint = `http://127.0.0.1:1880/deletarcontatos/${id}`
     fetch(endpoint)
-    // .then(res=>res.json)
-    .then(res=>{
-        if(res.status==200){
-            preencherdgv()
-        }
-    })
+        // .then(res=>res.json)
+        .then(res => {
+            if (res.status == 200) {
+                preencherdgv()
+            }
+        })
 }

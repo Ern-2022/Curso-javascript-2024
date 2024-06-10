@@ -8,10 +8,15 @@
 </head>
 
 <body>
-    <div id="fundopopup" class="fundopopup">
+    <div id="fundopopup" class="fundopopup ocultar">
         <div class="janelapopup" id="janelapopup">
             <div id="titulopopup" class="titulopopup">Editar codigo</div>
             <div id="principalpopup" class="principalpopup">
+                <div class="campoForm">
+                    <label>ID</label>
+                    <input type="text" name="f_id" id="f_id" readonly style="cursor: not-allowed">
+                </div>
+
                 <div class="campoForm">
                     <label>Nome</label>
                     <input type="text" name="f_nome" id="f_nome">
@@ -34,8 +39,8 @@
 
             </div>
             <div id="rodapepopup" class="rodapepopup">
-                <button id="btn_geral">Gravar</button>
-                <button id="btn_geral">Cancelar</button>
+                <button class="btn_geral" id="btn_gravar">Gravar</button>
+                <button class="btn_geral" id="btn_cancelar">Cancelar</button>
             </div>
         </div>
     </div>

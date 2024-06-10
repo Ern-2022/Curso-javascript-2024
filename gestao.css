@@ -5,6 +5,12 @@
   box-sizing: border-box;
 }
 
+/*AUXILIAR*/
+.ocultar{
+    display: none !important;
+}
+/*************/
+
 .resultado {
   display: flex;
   justify-content: flex-start;
@@ -146,6 +152,7 @@ h2 {
     align-items: flex-start;
     flex-direction:column;
     width: 100%;
+    margin-bottom: 5px;
 }
 
 .campoForm input{
@@ -163,7 +170,7 @@ h2 {
   border-radius: 0px 0px 5px 5px;
 }
 
-#btn_geral{
+.btn_geral{
     padding: 10px;
     cursor: pointer;
     border-radius: 5px;
