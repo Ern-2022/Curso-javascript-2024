@@ -128,3 +128,14 @@ h2{
     align-items: center;
     justify-content: center;
 }
+
+.iconeop{
+    width: 40%;
+    cursor: pointer;
+}
+
+.c_op{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
