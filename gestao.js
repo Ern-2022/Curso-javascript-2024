@@ -2,14 +2,7 @@ const dados = document.getElementById("dados")
 
 const preencherdgv = ()=>{
     dados.innerHTML = ""
-    const valorpesq = f_textpesq.value
-    if (valorpesq == "") {
-        alert("Digite a pesquisa")
-        f_textpesq.focus()
-        return
-    }
-    const f_pesq = document.querySelector("input[name=f_pesq]:checked").value
-    const entpoint = `http://127.0.0.1:1880/pesquisarcontatos/${f_pesq}/${valorpesq}`
+    const entpoint = `http://127.0.0.1:1880/pesquisartodoscontatos/`
     fetch(entpoint)
         .then(res => res.json())
         .then(res => {
