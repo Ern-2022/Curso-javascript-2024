@@ -5,25 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aula182.css">
-    <title>Aula 182</title>
+    <title>Estoque-BankOffice</title>
+    <link rel="stylesheet" href="../estoque_geral.css">
+    <link rel="stylesheet" href="aula182.css">
 </head>
 
 <body>
-    <div id="cabecalho" class="cabecalho">
-        cabecalho
+    <div id="menuPrincipal" class="menuPrincipal ocultar">
+        <div class="menuItens">
+            <a href="#" target="fprincipal" class="btn_menuItem">Colaboradores</a>
+            <a href="#" class="btn_menuItem">CFB cursos</a>
+            <a href="#" class="btn_menuItem">CFB cursos</a>
+            <a href="#" class="btn_menuItem">CFB cursos</a>
+            <a href="#" class="btn_menuItem">CFB cursos</a>
+        </div>
+
+        <div>
+            <img src="menu.svg" id="btn_menuPrincipal" class="btn_menuPrincipal">
+        </div>
     </div>
-    <div id="menu" class="menu">
-        <button id="btn_home" class="aba abaSelecionada">Home</button>
-        <button id="btn_novo" class="aba">Novo</button>
-        <button id="btn_pesquisar" class="aba"> Pesquisar</button>
-        <button id="btn_filtrar" class="aba"> Filtrar</button>
-        <button id="btn_gestao" class="aba">Gestao</button>
-        <button id="btn_sobre" class="aba">Sobre</button>
-    </div>
-    <div id="principal" class="principal">
-        <iframe name="if_principal" id="if_principal" class="if_principal" src="./home.html"></iframe>
-    </div>
-    <script src="aula182.js" type="module"></script>
+
+        <div id="principal" class="principal">
+            <iframe name="fprincipal" id="fprincipal" class="fprincipal"></iframe>
+        </div>
+
+        <script src="../estoque_geral.js" type="module"></script>
+    <script src="aula182.js" type="module"></script> 
 </body>
 
 </html>
