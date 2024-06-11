@@ -10,6 +10,11 @@ const f_dtnasc = document.getElementById("f_dtnasc")
 const btn_filtrar = document.getElementById("btn_filtrar")
 const f_filtronome = document.getElementById("f_filtronome")
 
+fetch("gestao.php")
+.then(res=>res.json())
+.then(res=>{
+    console.log(res)
+})
 
 btn_gravar.addEventListener("click", (evt) => {
     fundopopup.classList.add("ocultar")
@@ -40,6 +45,7 @@ const preencherdgv = (endpoint) => {
     fetch(endpointtodoscontatos)
         .then(res => res.json())
         .then(res => {
+            console.log(res)
             dados.innerHTML = ""
             res.forEach(el => {
                 const linha = document.createElement("div")
