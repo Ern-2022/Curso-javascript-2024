@@ -4,12 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="aula162.css">
+    <link rel="stylesheet" href="filtrar.css">
 </head>
 
 <body>
-    <h1>Filtrar</h1>
-    <!-- <script src="aula162.js"></script> -->
+    <div id="fundopopup" class="fundopopup ocultar">
+        <div class="janelapopup" id="janelapopup">
+            <div id="titulopopup" class="titulopopup">Editar codigo</div>
+            <div id="principalpopup" class="principalpopup">
+                <div class="campoForm">
+                    <label>ID</label>
+                    <input type="text" name="f_id" id="f_id" readonly style="cursor: not-allowed">
+                </div>
+
+                <div class="campoForm">
+                    <label>Nome</label>
+                    <input type="text" name="f_nome" id="f_nome">
+                </div>
+
+                <div class="campoForm">
+                    <label>Celular</label>
+                    <input type="text" name="f_celular" id="f_celular">
+                </div>
+
+                <div class="campoForm">
+                    <label>E-mail</label>
+                    <input type="email" name="f_email" id="f_email">
+                </div>
+
+                <div class="campoForm">
+                    <label>Data de nascimento</label>
+                    <input type="text" name="f_dtnasc" id="f_dtnasc">
+                </div>
+
+            </div>
+            <div id="rodapepopup" class="rodapepopup">
+                <button class="btn_geral" id="btn_gravar">Gravar</button>
+                <button class="btn_geral" id="btn_cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <h2>Filtrar</h2>
+
+    <div class="filtro" id="filtro">
+        <div class="campoForm">
+            <label>Nome</label>
+            <input type="text" name="f_filtronome" id="f_filtronome">
+        </div>
+
+        <div class="campoForm">
+            <img src="filter.svg" alt="filter">
+        </div>
+    </div>
+
+    <div class="dgv">
+        <div id="resultado" class="resultado">
+            <div id="titulos" class="titulos">
+                <div class="titulo c1">ID</div>
+                <div class="titulo c2">Nome</div>
+                <div class="titulo c3">Celular</div>
+                <div class="titulo c4">E-mail</div>
+                <div class="titulo c5">Data </div>
+                <div class="titulo c6">Operacoes</div>
+            </div>
+
+            <div id="dados" class="dados">
+                <div class="linhadados">
+                    <!-- <div class="coluna c1">ID</div>
+                    <div class="coluna c2">Nome</div>
+                    <div class="coluna c3">Celular</div>
+                    <div class="coluna c4">E-mail</div>
+                    <div class="coluna c5">Data </div>
+                    <div class="coluna c6">Operacoes</div>
+                </div> -->
+                </div>
+            </div>
+        </div>
+
+        <script src="filtrar.js"></script>
 </body>
 
 </html>
