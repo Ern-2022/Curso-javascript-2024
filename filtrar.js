@@ -7,6 +7,8 @@ const f_nome = document.getElementById("f_nome")
 const f_celular = document.getElementById("f_celular")
 const f_email = document.getElementById("f_email")
 const f_dtnasc = document.getElementById("f_dtnasc")
+const btn_filtrar = document.getElementById("btn_filtrar")
+const f_filtronome = document.getElementById("f_filtronome")
 
 
 btn_gravar.addEventListener("click", (evt) => {
@@ -32,10 +34,10 @@ btn_cancelar.addEventListener("click", (evt) => {
     fundopopup.classList.add("ocultar")
 })
 
-const preencherdgv = () => {
+const preencherdgv = (endpoint) => {
     dados.innerHTML = ""
-    const entpoint = `http://127.0.0.1:1880/pesquisartodoscontatos/`
-    fetch(entpoint)
+    // const entpoint = `http://127.0.0.1:1880/pesquisartodoscontatos/`
+    fetch(endpoint)
         .then(res => res.json())
         .then(res => {
             dados.innerHTML = ""
@@ -110,7 +112,16 @@ const removerContato = (id) => {
         // .then(res=>res.json)
         .then(res => {
             if (res.status == 200) {
-                preencherdgv()
+                preencherdgv(`http://127.0.0.1:1880/pesquisartodoscontatos/`)
             }
         })
 }
+
+btn_filtrar.addEventListener("click",(evt)=>{
+ if(f_filtronome.value==""){
+    preencherdgv(`http://127.0.0.1:1880/pesquisartodoscontatos/`)
+ }else{
+     preencherdgv( `http://127.0.0.1:1880/filtrar/${f_filtronome.value}`)
+     }
+ 
+})
