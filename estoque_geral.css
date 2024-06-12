@@ -1,0 +1,40 @@
+.menuPrincipal {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: #f00 solid 1px;
+  width: 250px;
+  height: 100vh;
+}
+
+.ocultar {
+    left: -210px !important;
+}
+
+.menuItens {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #aaa;
+  height: 100%;
+}
+
+.btn_menuItem {
+  cursor: pointer;
+  margin: 5px;
+  padding: 5px 15px;
+  width: 200px;
+}
+
+.btn_menuPrincipal {
+  cursor: pointer;
+  width: 40px;
+}
+
+.btn_menuPrincipal img {
+  width: auto;
+}
