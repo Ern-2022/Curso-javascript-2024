@@ -16,7 +16,7 @@
 }
 
 .ocultar {
-    left: -210px !important;
+    left: -190px !important;
     transition: all .5s;
 }
 
@@ -28,6 +28,8 @@
   background-color: #ccc;
   height: 100%;
 }
+
+
 
 .btn_menuItem {
   cursor: pointer;

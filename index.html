@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" type="text/html" href="../estoque_geral.css"> -->
     <link rel="stylesheet" href="estoque_geral.css">
+    <link rel="stylesheet" href="index.css">
     <title>Estoque - BackOffice</title>
 </head>
 
 <body>
     <div id="menuPrincipal" class="menuPrincipal ocultar">
         <div class="menuItens">
-            <button target="fprincipal" class="btn_menuItem">Colaboradores</button>
+            <a href="./colaboradores.html" target="fprincipal" class="btn_menuItem">Colaboradores</a>
             <button class="btn_menuItem">CFB cursos</button>
             <button class="btn_menuItem">CFB cursos</button>
             <button class="btn_menuItem">CFB cursos</button>
@@ -23,6 +24,15 @@
         <div>
             <img src="menu.svg" id="btn_menuPrincipal" class="btn_menuPrincipal">
         </div>
+    </div>
+
+    <div class="topo" id="topo">
+        <div id="logo" class="logo">Logo</div> 
+        <div id="config" class="config">Config</div>
+    </div>
+
+    <div class="principal" id="principal">
+        <iframe name="fprincipal" class="fprincipal"></iframe>
     </div>
 
     <script src="index.js" type="module"></script>
