@@ -1,6 +1,6 @@
 const btn_menuPrincipal = document.getElementById("btn_menuPrincipal")
-const menuPrincipa = document.getElementById("menuPrincipa")
+const menuPrincipal = document.getElementById("menuPrincipal")
 
-btn_menuPrincipal.addEventListener("click",(evt)=>{
-.classList.toggle("ocultar")
+btn_menuPrincipal.addEventListener("click", (evt) => {
+    menuPrincipal.classList.toggle("ocultar")
 })

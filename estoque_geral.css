@@ -1,3 +1,8 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 .menuPrincipal {
   position: absolute;
   top: 0px;
@@ -5,13 +10,14 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  border: #f00 solid 1px;
   width: 250px;
   height: 100vh;
+  transition: all .5s;
 }
 
 .ocultar {
     left: -210px !important;
+    transition: all .5s;
 }
 
 .menuItens {
@@ -19,7 +25,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background-color: #aaa;
+  background-color: #ccc;
   height: 100%;
 }
 
@@ -27,14 +33,16 @@
   cursor: pointer;
   margin: 5px;
   padding: 5px 15px;
-  width: 200px;
+  width: 150px;
+  border: none;
+  background-color: #888;
+  text-align: center;
+  color: #fff;
 }
 
 .btn_menuPrincipal {
   cursor: pointer;
+  border: none;
   width: 40px;
 }
 
-.btn_menuPrincipal img {
-  width: auto;
-}
