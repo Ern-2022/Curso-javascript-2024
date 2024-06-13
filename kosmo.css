@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+:root{
+--azul-princpal:#005288;
+}
 
 body{
     overflow: hidden;
@@ -18,7 +21,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #248;
+    background-color: var(--azul-princpal);
     color: #fff;
 }
 
@@ -45,4 +48,19 @@ body{
 display: flex;
 justify-content: center;
 align-items: center;
+}
+
+/* TOPO DA JANELA */
+.topoJanela{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+}
+
+.btn_mainoper{
+background-color: var(--azul-princpal);
+border-radius: 100px;
+cursor: pointer;
+width: 40px;
 }
