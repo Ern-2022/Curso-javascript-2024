@@ -1,0 +1,48 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
+}
+
+.grid{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tituloGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #248;
+    color: #fff;
+}
+
+.colunaTituloGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+ .dadosGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.linhaGrid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.colunaLinhaGrid{
+display: flex;
+justify-content: center;
+align-items: center;
+}
