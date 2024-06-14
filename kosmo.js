@@ -1,4 +1,5 @@
 const dadosGrid = document.getElementById("dadosGrid")
+const btn_add = document.getElementById("btn_add")
 
 const endpoint = "http://127.0.0.1:1880/todosusuarios"
 
@@ -39,3 +40,6 @@ fetch(endpoint)
     });
 })
 
+btn_add.addEventListener("click",(evt)=>{
+    novoColaborador.classList.remove("ocultarPopup")
+})
