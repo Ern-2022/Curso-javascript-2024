@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 :root{
 --azul-principal:#005288;
@@ -103,13 +104,16 @@ width: 40px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: column;
     background-color: var(--fundo-janela);
     width: 100%;
+    padding: 5px;
+    /* border: solid 1px red; */
 }
 
 .rodapepopup{
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: flex-start;
     background-color: var(--azul-principal);
     padding: 5px;
@@ -123,4 +127,32 @@ width: 40px;
     background-color: var(--azul-principal);
     border: none;
     color: var(--branco-so);
+}
+
+.comadoPopup{
+    background-color: #012d4b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.campoForm{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.campoForm input,
+.campoForm select{
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
 }
