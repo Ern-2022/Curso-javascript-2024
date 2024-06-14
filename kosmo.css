@@ -124,9 +124,6 @@ width: 40px;
 .btn_janelaoper{
     width: 30px;
     cursor: pointer;
-    background-color: var(--azul-principal);
-    border: none;
-    color: var(--branco-so);
 }
 
 .comadoPopup{
