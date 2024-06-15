@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 :root {
   --azul-principal: #005288;
@@ -33,7 +34,8 @@ body {
   justify-content: center;
   align-items: center;
 }
-*/ .dadosGrid {
+
+.dadosGrid {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -155,9 +157,8 @@ body {
   border: none;
 }
 
-.mostrarPopup {
-  /* display:none; */
-  opacity: 0 !important;
-  z-index: -1;
-  transition: 0.3s;
+
+.ocultarPopup{
+  display: none;
+
 }

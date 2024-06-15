@@ -42,10 +42,11 @@ fetch(endpoint)
     });
 })
 
-btn_add.addEventListener("click",(evt)=>{
-    novoColaborador.classList.remmove("ocultarPopup")
+btn_closePopup.addEventListener("click",(evt)=>{
+    
+    novoColaborador.classList.remove("ocultarPopup")
 })
 
-btn_closePopup.addEventListener("click",(evt)=>{
+btn_add.addEventListener("click",(evt)=>{
     novoColaborador.classList.add("ocultarPopup")
 })
