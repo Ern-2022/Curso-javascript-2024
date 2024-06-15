@@ -160,5 +160,5 @@ width: 40px;
     /* display:none; */
     opacity: 0 !important;
     z-index: -1;
-    transition: .3s:
+    transition: .3s;
 }
