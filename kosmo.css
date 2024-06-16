@@ -156,15 +156,15 @@ body {
   margin-bottom: 5px;
 }
 
-.campoForm div {
+/* .campoForm div {
   padding: 5px;
   border-radius: 5px;
   box-sizing: border-box;
   border: none;
   /* width: 100%; */
-  background-color: #fff;
+  /* background-color: #fff;
   margin-bottom: 5px;
-}
+}  */
 
 .ocultarPopup {
   display: none !important;
@@ -176,6 +176,7 @@ body {
   align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: var(--branco-so);
 }
 
 .tel {

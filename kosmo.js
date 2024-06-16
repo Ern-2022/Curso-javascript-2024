@@ -93,6 +93,9 @@ f_fone.addEventListener("keyup",(evt)=>{
        delTel.setAttribute("src","trash.svg")
        delTel.setAttribute("class","delTel")
         divTel.appendChild(delTel)
+        delTel.addEventListener("click",(evt)=>{
+            console.log(evt.target.parentNode);
+        })
        telefones.appendChild(divTel)
 
        evt.target.value=""
