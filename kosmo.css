@@ -161,6 +161,7 @@ body {
   border-radius: 5px;
   box-sizing: border-box;
   border: none;
+  /* width: 100%; */
   background-color: #fff;
   margin-bottom: 5px;
 }
@@ -174,17 +175,17 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
-  flex-direction: wrap;
+  flex-wrap: wrap;
 }
 
 .tel {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  flex-direction: row;
 }
 
-.numtel {
+
+.numTel {
   background-color: #888 !important;
   padding: 5px;
   border: 5px;
@@ -197,6 +198,6 @@ body {
   padding: 5px;
   border: 5px;
   border-radius: 0px 5px 5px 0px !important;
-  width: 19px !important;
+  width: 29px !important;
   cursor: pointer;
 }

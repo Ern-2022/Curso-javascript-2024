@@ -82,20 +82,19 @@ btn_cancelarPopup.addEventListener("click", (evt) => {
 
 f_fone.addEventListener("keyup",(evt)=>{
     if(evt.key=="Enter"){
-        const divTel = document.createElement("div")
-        divTel.setAttribute("class","tel")
+      const divTel = document.createElement("div")  
+      divTel.setAttribute("class","tel")
 
-        const numTel = document.createElement("div")
-        numTel.setAttribute("class","numTel")
-        numTel.innerHTML=evt.target.value
+      const numTel = document.createElement("div")
+       numTel.setAttribute("class","numTel")
+       numTel.innerHTML = evt.target.value; 
         divTel.appendChild(numTel)
-
-        const delTel = document.createElement("img")
-        delTel.setAttribute("src","trash.svg")
-        delTel.setAttribute("class","delTel")
+       const delTel = document.createElement("img")
+       delTel.setAttribute("src","trash.svg")
+       delTel.setAttribute("class","delTel")
         divTel.appendChild(delTel)
-        telefones.appendChild(divTel)
+       telefones.appendChild(divTel)
 
-        evt.target.value=""
+       evt.target.value=""
     }
-})
+}) 
