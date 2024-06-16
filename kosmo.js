@@ -9,6 +9,8 @@ const telefones = document.getElementById("telefones")
 const f_fone = document.getElementById("f_fone")
 const f_nome = document.getElementById("f_nome")
 const f_status = document.getElementById("f_status")
+const f_foto = document.getElementById("f_foto")
+const img_foto = document.getElementById("img_foto")
 
 const endpoint = "http://127.0.0.1:1880/todosusuarios"
 
@@ -85,7 +87,8 @@ btn_gravarPopup.addEventListener("click", (evt) => {
         s_nome_usuario: f_nome.value,
         n_tipousuario_tipousuario: f_tiposcolab.value,
         c_status_usuario: f_status.value,
-        numtelefone: numTels
+        numtelefone: numTels,
+        s_foto_uauario:img_foto.setAttribute("src")
     }
     const cab = {
         method: "POST",
@@ -129,8 +132,23 @@ f_fone.addEventListener("keyup", (evt) => {
             telefones.appendChild(divTel)
 
             evt.target.value = ""
-        }else{
+        } else {
             alert("Numero de telefone invalido!")
         }
     }
-}) 
+})
+
+const converte_imagem_b64 = (localDestino, arquivoimg) => {
+    const obj = arquivoimg;
+    const reader = new FileReader();
+    reader.addEventListener("load", (evt) => {
+        localDestino.src = reader.result 
+    })
+    if (obj) {
+        reader.readAsDataURL(obj)
+    }
+}
+
+f_foto.addEventListener("change", (evt) => {
+    converte_imagem_b64(img_foto,evt.target.files[0])
+})

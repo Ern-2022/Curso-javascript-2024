@@ -26,6 +26,6 @@ body{
 .img_foto{
     width: 75px;
     height: 100px;
-    border: 2px solid #fff;
+    border: 2px solid #000;
     border-radius: 5px;
 }

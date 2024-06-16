@@ -145,6 +145,18 @@ body {
   width: 100%;
 }
 
+.campoForm2 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  padding: 5px;
+  border-radius:5px;
+}
+
 .campoForm input,
 .campoForm select {
   padding: 5px;
