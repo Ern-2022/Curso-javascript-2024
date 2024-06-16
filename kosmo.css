@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 :root {
   --azul-principal: #005288;
@@ -147,37 +146,57 @@ body {
 }
 
 .campoForm input,
-.campoForm select,
-.campoForm div {
+.campoForm select {
   padding: 5px;
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
   border: none;
   background-color: #fff;
+  margin-bottom: 5px;
 }
 
+.campoForm div {
+  padding: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
 
-.ocultarPopup{
+.ocultarPopup {
   display: none !important;
 }
 
-.tel{
+.telefones {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-direction: wrap;
+}
+
+.tel {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
 }
- 
-.numtel{
-background-color: #888 !important;
-padding: 5px;
-border: 5px;
-border-radius: 5px 0px 0px 5px !important;
+
+.numtel {
+  background-color: #888 !important;
+  padding: 5px;
+  border: 5px;
+  border-radius: 5px 0px 0px 5px !important;
+  width: 100px !important;
 }
 
-.delTel{
-background-color: 5px; 
-padding: 5px;border: 5px;
-border-radius: 0px 5px 5px 0px;
+.delTel {
+  background-color: #f88 !important;
+  padding: 5px;
+  border: 5px;
+  border-radius: 0px 5px 5px 0px !important;
+  width: 19px !important;
+  cursor: pointer;
 }
