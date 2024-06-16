@@ -147,15 +147,37 @@ body {
 }
 
 .campoForm input,
-.campoForm select {
+.campoForm select,
+.campoForm div {
   padding: 5px;
   border-radius: 5px;
   width: 100%;
   box-sizing: border-box;
   border: none;
+  background-color: #fff;
 }
 
 
 .ocultarPopup{
-  display: none;
+  display: none !important;
+}
+
+.tel{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+}
+ 
+.numtel{
+background-color: #888 !important;
+padding: 5px;
+border: 5px;
+border-radius: 5px 0px 0px 5px !important;
+}
+
+.delTel{
+background-color: 5px; 
+padding: 5px;border: 5px;
+border-radius: 0px 5px 5px 0px;
 }
