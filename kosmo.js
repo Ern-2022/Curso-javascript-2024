@@ -4,7 +4,7 @@ const btn_closePopup = document.getElementById("btn_closePopup")
 const novoColaborador = document.getElementById("novoColaborador")
 const btn_gravarPopup = document.getElementById("btn_gravarPopup")
 const btn_cancelarPopup = document.getElementById("btn_cancelarPopup")
-const tiposcolab = document.getElementById("tiposcolab")
+const f_tiposcolab = document.getElementById("f_tiposcolab")
 const telefones = document.getElementById("telefones")
 const f_fone = document.getElementById("f_fone")
 
@@ -52,26 +52,32 @@ const endpoint_tipocolab = "http://127.0.0.1:1880/tiposcolab"
 fetch(endpoint_tipocolab)
     .then(res => res.json())
     .then(res => {
-        tiposcolab.innerHTML = ""
+        f_tiposcolab.innerHTML=""
+        console.log(res);
         res.forEach(e=>{
             const opt = document.createElement("option")
-            opt.setAttribute("value","e.n_tipousuario_tipousuario")
-            opt.innerHTML = s_desc_tipousuario
-            tiposcolab.appendChild(opt)
+            opt.setAttribute("value",e.n_tipousuario_tipousuario)
+            opt.innerHTML = e.s_desc_tipousario
+            f_tiposcolab.appendChild(opt)
+
         })
     })
 
  
 btn_closePopup.addEventListener("click", (evt) => {
-
-    novoColaborador.classList.remove("ocultarPopup")
+    novoColaborador.classList.add("ocultarPopup")
 })
 
 btn_add.addEventListener("click", (evt) => { 
+    novoColaborador.classList.remove("ocultarPopup")
+})
+
+btn_gravarPopup.addEventListener("click", (evt) => {
     novoColaborador.classList.add("ocultarPopup")
 })
+
 btn_cancelarPopup.addEventListener("click", (evt) => {
-    novoColaborador.classList.remove("ocultarPopup")
+    novoColaborador.classList.add("ocultarPopup")
 })
 
 f_fone.addEventListener("keyup",(evt)=>{
