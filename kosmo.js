@@ -7,6 +7,8 @@ const btn_cancelarPopup = document.getElementById("btn_cancelarPopup")
 const f_tiposcolab = document.getElementById("f_tiposcolab")
 const telefones = document.getElementById("telefones")
 const f_fone = document.getElementById("f_fone")
+const f_nome = document.getElementById("f_nome")
+const f_status = document.getElementById("f_status")
 
 const endpoint = "http://127.0.0.1:1880/todosusuarios"
 
@@ -52,52 +54,79 @@ const endpoint_tipocolab = "http://127.0.0.1:1880/tiposcolab"
 fetch(endpoint_tipocolab)
     .then(res => res.json())
     .then(res => {
-        f_tiposcolab.innerHTML=""
+        f_tiposcolab.innerHTML = ""
         console.log(res);
-        res.forEach(e=>{
+        res.forEach(e => {
             const opt = document.createElement("option")
-            opt.setAttribute("value",e.n_tipousuario_tipousuario)
+            opt.setAttribute("value", e.n_tipousuario_tipousuario)
             opt.innerHTML = e.s_desc_tipousario
             f_tiposcolab.appendChild(opt)
 
         })
     })
 
- 
+
 btn_closePopup.addEventListener("click", (evt) => {
     novoColaborador.classList.add("ocultarPopup")
 })
 
-btn_add.addEventListener("click", (evt) => { 
+btn_add.addEventListener("click", (evt) => {
     novoColaborador.classList.remove("ocultarPopup")
 })
 
 btn_gravarPopup.addEventListener("click", (evt) => {
-    novoColaborador.classList.add("ocultarPopup")
+    const tels = [...document.querySelectorAll(".numTel")]
+    let numTels = []
+    tels.forEach(t => {
+        numTels.push(t.innerHTML)
+    })
+
+    const dados = {
+        s_nome_usuario: f_nome.value,
+        n_tipousuario_tipousuario: f_tiposcolab.value,
+        c_status_usuario: f_status.value,
+        numtelefone: numTels
+    }
+    const cab ={
+        method:"POST",
+        data:JSON.stringify(dados)
+    }
+    const endpointnovocolab = `http://127.0.0.1:1880/novocolab`
+    fetch(endpointnovocolab,cab)
+    // .then(res=>res.json())
+    .then(res=>{
+        if(res.status==200){
+            alert("Novo colaborador gravador!")
+        }else{
+            alert("Erro ao gravar novo colaborador!")
+        }
+    })
+    console.log(dados)
+    // novoColaborador.classList.add("ocultarPopup")
 })
 
 btn_cancelarPopup.addEventListener("click", (evt) => {
     novoColaborador.classList.add("ocultarPopup")
 })
 
-f_fone.addEventListener("keyup",(evt)=>{
-    if(evt.key=="Enter"){
-      const divTel = document.createElement("div")  
-      divTel.setAttribute("class","tel")
+f_fone.addEventListener("keyup", (evt) => {
+    if (evt.key == "Enter") {
+        const divTel = document.createElement("div")
+        divTel.setAttribute("class", "tel")
 
-      const numTel = document.createElement("div")
-       numTel.setAttribute("class","numTel")
-       numTel.innerHTML = evt.target.value; 
+        const numTel = document.createElement("div")
+        numTel.setAttribute("class", "numTel")
+        numTel.innerHTML = evt.target.value;
         divTel.appendChild(numTel)
-       const delTel = document.createElement("img")
-       delTel.setAttribute("src","trash.svg")
-       delTel.setAttribute("class","delTel")
+        const delTel = document.createElement("img")
+        delTel.setAttribute("src", "trash.svg")
+        delTel.setAttribute("class", "delTel")
         divTel.appendChild(delTel)
-        delTel.addEventListener("click",(evt)=>{
-            console.log(evt.target.parentNode);
+        delTel.addEventListener("click", (evt) => {
+            evt.target.parentNode.remove()
         })
-       telefones.appendChild(divTel)
+        telefones.appendChild(divTel)
 
-       evt.target.value=""
+        evt.target.value = ""
     }
 }) 
