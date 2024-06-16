@@ -87,20 +87,20 @@ btn_gravarPopup.addEventListener("click", (evt) => {
         c_status_usuario: f_status.value,
         numtelefone: numTels
     }
-    const cab ={
-        method:"POST",
-        data:JSON.stringify(dados)
+    const cab = {
+        method: "POST",
+        data: JSON.stringify(dados)
     }
     const endpointnovocolab = `http://127.0.0.1:1880/novocolab`
-    fetch(endpointnovocolab,cab)
-    // .then(res=>res.json())
-    .then(res=>{
-        if(res.status==200){
-            alert("Novo colaborador gravador!")
-        }else{
-            alert("Erro ao gravar novo colaborador!")
-        }
-    })
+    fetch(endpointnovocolab, cab)
+        // .then(res=>res.json())
+        .then(res => {
+            if (res.status == 200) {
+                alert("Novo colaborador gravador!")
+            } else {
+                alert("Erro ao gravar novo colaborador!")
+            }
+        })
     console.log(dados)
     // novoColaborador.classList.add("ocultarPopup")
 })
@@ -111,22 +111,26 @@ btn_cancelarPopup.addEventListener("click", (evt) => {
 
 f_fone.addEventListener("keyup", (evt) => {
     if (evt.key == "Enter") {
-        const divTel = document.createElement("div")
-        divTel.setAttribute("class", "tel")
+        if (evt.target.value.length >= 9) {
+            const divTel = document.createElement("div")
+            divTel.setAttribute("class", "tel")
 
-        const numTel = document.createElement("div")
-        numTel.setAttribute("class", "numTel")
-        numTel.innerHTML = evt.target.value;
-        divTel.appendChild(numTel)
-        const delTel = document.createElement("img")
-        delTel.setAttribute("src", "trash.svg")
-        delTel.setAttribute("class", "delTel")
-        divTel.appendChild(delTel)
-        delTel.addEventListener("click", (evt) => {
-            evt.target.parentNode.remove()
-        })
-        telefones.appendChild(divTel)
+            const numTel = document.createElement("div")
+            numTel.setAttribute("class", "numTel")
+            numTel.innerHTML = evt.target.value;
+            divTel.appendChild(numTel)
+            const delTel = document.createElement("img")
+            delTel.setAttribute("src", "trash.svg")
+            delTel.setAttribute("class", "delTel")
+            divTel.appendChild(delTel)
+            delTel.addEventListener("click", (evt) => {
+                evt.target.parentNode.remove()
+            })
+            telefones.appendChild(divTel)
 
-        evt.target.value = ""
+            evt.target.value = ""
+        }else{
+            alert("Numero de telefone invalido!")
+        }
     }
 }) 
