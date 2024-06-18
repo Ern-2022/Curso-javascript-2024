@@ -87,25 +87,25 @@ btn_gravarPopup.addEventListener("click", (evt) => {
         s_nome_usuario: f_nome.value,
         n_tipousuario_tipousuario: f_tiposcolab.value,
         c_status_usuario: f_status.value,
-        numtelefone: numTels,
+        numtelefones: numTels,
         s_foto_usuario:img_foto.getAttribute("src")
     }
     const cab = {
         method:'POST',
         body:JSON.stringify(dados)
     }
-    const endpointnovocolab = `http://127.0.0.1:1880/novocolab`
-    fetch(endpointnovocolab, cab)
-        // .then(res=>res.json())
+
+    const endpoint_novocolab = "http://127.0.0.1:1880/novocolab"
+        fetch(endpoint_novocolab, cab)
         .then(res => {
-            if (res.status == 200) {
+            if (res.status ==200) {
                 alert("Novo colaborador gravador!")
             } else {
                 alert("Erro ao gravar novo colaborador!")
             }
         })
-    console.log(dados)
-    // novoColaborador.classList.add("ocultarPopup")
+    // console.log(dados)
+    novoColaborador.classList.add("ocultarPopup")
 })
 
 btn_cancelarPopup.addEventListener("click", (evt) => {
