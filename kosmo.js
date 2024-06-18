@@ -95,8 +95,9 @@ btn_gravarPopup.addEventListener("click", (evt) => {
         body:JSON.stringify(dados)
     }
 
-    const endpoint_novocolab = "http://127.0.0.1:1880/novocolab"
+    const endpoint_novocolab = "http://127.0.0.1:1880/novocolab";
         fetch(endpoint_novocolab, cab)
+        // .then(res=>res.json())
         .then(res => {
             if (res.status ==200) {
                 alert("Novo colaborador gravador!")
