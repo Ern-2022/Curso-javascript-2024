@@ -82,17 +82,17 @@ btn_gravarPopup.addEventListener("click", (evt) => {
     tels.forEach(t => {
         numTels.push(t.innerHTML)
     })
-
+ 
     const dados = {
         s_nome_usuario: f_nome.value,
         n_tipousuario_tipousuario: f_tiposcolab.value,
         c_status_usuario: f_status.value,
         numtelefone: numTels,
-        s_foto_uauario:img_foto.setAttribute("src")
+        s_foto_usuario:img_foto.getAttribute("src")
     }
     const cab = {
-        method: "POST",
-        data: JSON.stringify(dados)
+        method:'POST',
+        body:JSON.stringify(dados)
     }
     const endpointnovocolab = `http://127.0.0.1:1880/novocolab`
     fetch(endpointnovocolab, cab)
@@ -151,4 +151,4 @@ const converte_imagem_b64 = (localDestino, arquivoimg) => {
 
 f_foto.addEventListener("change", (evt) => {
     converte_imagem_b64(img_foto,evt.target.files[0])
-})
+})  
