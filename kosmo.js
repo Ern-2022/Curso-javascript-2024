@@ -82,30 +82,14 @@ btn_gravarPopup.addEventListener("click", (evt) => {
     tels.forEach(t => {
         numTels.push(t.innerHTML)
     })
- 
     const dados = {
-        s_nome_usuario: f_nome.value,
-        n_tipousuario_tipousuario: f_tiposcolab.value,
-        c_status_usuario: f_status.value,
-        numtelefones: numTels,
+        s_nome_usuario:f_nome.value,
+        n_tipousuario_tipousuario:f_tiposcolab.value,
+        c_status_usuario:f_status.value,
+        numtelefones:numTels,
         s_foto_usuario:img_foto.getAttribute("src")
     }
-    const cab = {
-        method:'POST',
-        body:JSON.stringify(dados)
-    }
-
-    const endpoint_novocolab = "http://127.0.0.1:1880/novocolab";
-        fetch(endpoint_novocolab, cab)
-        // .then(res=>res.json())
-        .then(res => {
-            if (res.status ==200) {
-                alert("Novo colaborador gravador!")
-            } else {
-                alert("Erro ao gravar novo colaborador!")
-            }
-        })
-    // console.log(dados)
+ 
     novoColaborador.classList.add("ocultarPopup")
 })
 
@@ -145,11 +129,11 @@ const converte_imagem_b64 = (localDestino, arquivoimg) => {
     reader.addEventListener("load", (evt) => {
         localDestino.src = reader.result 
     })
-    if (obj) {
+    if (obj){ 
         reader.readAsDataURL(obj)
     }
 }
 
-f_foto.addEventListener("change", (evt) => {
+f_foto.addEventListener("change",(evt)=>{
     converte_imagem_b64(img_foto,evt.target.files[0])
-})  
+})
